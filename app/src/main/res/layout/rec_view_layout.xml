@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/tvStrikePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="18200"
+        android:textSize="20sp"
+        android:backgroundTint="@color/purple_200"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvCallsRV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:layout_margin="2dp"/>
+
+    <TextView
+        android:id="@+id/tvCallsRV"
+        android:backgroundTint="@color/purple_200"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calls"
+        android:textColor="#00ff00"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvPutsRV"
+        app:layout_constraintStart_toEndOf="@+id/tvStrikePrice"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:layout_margin="2dp"/>
+
+    <TextView
+        android:id="@+id/tvPutsRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Puts"
+        android:textColor="#ff0000"
+        android:backgroundTint="@color/purple_200"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/tvPCRRV"
+        app:layout_constraintStart_toEndOf="@+id/tvCallsRV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:layout_margin="2dp" />
+
+    <TextView
+        android:background="@color/white"
+        android:layout_margin="2dp"
+        android:backgroundTint="@color/purple_200"
+        android:id="@+id/tvPCRRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="PCR"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPutsRV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvOIRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:text="OI"
+        android:textAlignment="center"
+        android:textColor="#0000ff"
+        android:textSize="20sp"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/tvStrikePrice"
+        app:layout_constraintStart_toStartOf="@+id/tvStrikePrice"
+        app:layout_constraintTop_toBottomOf="@+id/tvStrikePrice" />
+
+    <TextView
+        android:id="@+id/tvCallsOIData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textColor="#00ff00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/tvPutsOIData"
+        app:layout_constraintStart_toStartOf="@+id/tvCallsRV"
+        app:layout_constraintTop_toBottomOf="@+id/tvCallsRV"
+        tools:text="12345678" />
+
+    <TextView
+        android:id="@+id/tvPutsOIData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textColor="#ff0000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/tvPCROIData"
+        app:layout_constraintStart_toEndOf="@+id/tvCallsOIData"
+        app:layout_constraintTop_toBottomOf="@+id/tvPutsRV"
+        tools:text="12345" />
+
+    <TextView
+        android:id="@+id/tvPCROIData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/tvPCRRV"
+        app:layout_constraintStart_toEndOf="@+id/tvPutsOIData"
+        app:layout_constraintTop_toBottomOf="@+id/tvPCRRV"
+        tools:text="0.57" />
+
+    <TextView
+        android:id="@+id/tvVolRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:text="Vol:"
+        android:textAlignment="center"
+        android:textColor="#0000ff"
+        android:textSize="20sp"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvOIRV"
+        app:layout_constraintStart_toStartOf="@+id/tvOIRV"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/tvCallsVolData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textColor="#00ff00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/tvCallsOIData"
+        app:layout_constraintRight_toLeftOf="@id/tvPutsVolData"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:text="1234567" />
+
+    <TextView
+        android:id="@+id/tvPutsVolData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textColor="#ff0000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvCallsVolData"
+        app:layout_constraintRight_toLeftOf="@+id/tvPCRVolData"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:text="12345678" />
+
+    <TextView
+        android:id="@+id/tvPCRVolData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvPutsVolData"
+        app:layout_constraintRight_toRightOf="@+id/tvPCROIData"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:text="0.69" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
